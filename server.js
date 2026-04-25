@@ -125,9 +125,7 @@ const clean   = t => t.replace(/\[PASS\]|\[BLOCK\]/g, '').trim();
 const isPass  = t => t.includes('[PASS]');
 const isBlock = t => t.includes('[BLOCK]');
 const now     = () => new Date().toISOString();
-const HOST    = () => process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : process.env.HOST || 'https://stackborn-backend.vercel.app';
+const HOST    = () => process.env.HOST || 'https://stackborn-backend.vercel.app';
 
 // ═══════════════════════════════════════════════════════════════
 //  VOICE ROUTES
